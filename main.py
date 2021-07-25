@@ -83,7 +83,6 @@ arg=None
 
 srv1 = bluetooth.service(uuid=b'1234567890123456', isprimary=True)
 chr1 = srv1.characteristic(uuid=b'ab34567890123456', value=5)
-<<<<<<< HEAD
 char1_cb = chr1.callback(trigger=Bluetooth.CHAR_WRITE_EVENT, handler=bt_write_handler, arg=arg)
 
 lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT | LoRa.TX_FAILED_EVENT), handler=lora_cb)
@@ -102,6 +101,3 @@ while(True):
 
 
 
-=======
-char1_cb = chr1.callback(trigger=Bluetooth.CHAR_WRITE_EVENT, handler=message_characteristic_handler, arg=arg)
->>>>>>> 39a7d4202f88af3c737440dd5adc0809e6868cbd
